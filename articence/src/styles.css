@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.app {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+/* Heading */
+h1 {
+  color: #007bff;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Container for Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Data Point List */
+.data-point-list {
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-point-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.data-point-list-header h2 {
+  color: #333;
+  margin: 0;
+}
+
+.data-point-list-header button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.data-point-list-header button:hover {
+  background-color: #0056b3;
+}
+
+.data-point-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.data-point-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: grab;
+  background-color: #e7f0ff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.data-point-item:hover {
+  background-color: #cfe9ff;
+  transform: scale(1.02);
+}
+
+/* Graph Canvas */
+.graph-canvas {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Graph Type Selector */
+.graph-type-selector {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.graph-type-selector label {
+  margin-right: 15px;
+  font-weight: 600;
+  color: #555;
+  align-content: center;
+}
+
+.graph-type-selector select {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.graph-type-selector select:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-point-list, .graph-canvas {
+    width: 90%;
+    max-width: none;
+  }
+
+  .data-point-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.data-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between columns as needed */
+}
+
+.data-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap between data points in a column as needed */
+}
