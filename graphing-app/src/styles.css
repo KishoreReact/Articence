@@ -152,5 +152,12 @@ h1 {
 .data-column {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adjust the gap between data points in a column as needed */
+  gap: 10px; 
+}
+
+.axis-selector select {
+  padding: 0.25rem 0.5rem; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 1rem; 
 }
