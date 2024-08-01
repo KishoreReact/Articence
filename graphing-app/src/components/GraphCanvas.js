@@ -10,7 +10,7 @@ const GraphCanvas = ({ dataPoints, graphType, xAxis, yAxis, onDrop, xAxisLabel, 
 
   useEffect(() => {
     const data = {
-      //labels: dataPoints.map((point) => point[xAxis,yAxis] ),
+      labels: dataPoints.map((point) => point[xAxis] ),
       datasets: [
         {
           label: `${xAxisLabel} vs ${yAxisLabel}`,
